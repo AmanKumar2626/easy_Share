@@ -8,7 +8,7 @@ export const uploadImage = async (request, response) => {
     }
     try{
         const file = await File.create(fileObj);
-        const fileUrl = `http://localhost:8000/file/${file._id}`;
+        const fileUrl = `https://easy-share-backend.onrender.com/file/${file._id}`;
         setFileUrl(fileUrl);
         console.log(file);
         response.status(200).json({path: fileUrl});
